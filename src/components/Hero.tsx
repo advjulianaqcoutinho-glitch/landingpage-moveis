@@ -126,7 +126,7 @@ export default function Hero({ onCTA }: HeroProps) {
             whileTap={{ scale: 0.98 }}
             className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-[#c9a46e] to-[#b48c5a] text-[#080808] font-semibold text-base overflow-hidden transition-all duration-300 shadow-[0_0_40px_rgba(180,140,90,0.25)]"
           >
-            <span className="relative z-10">Receber meu plano gratuito</span>
+            <span className="relative z-10">QUERO APLICAR NA MINHA LOJA</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#d4b07a] to-[#c9a46e] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.button>
           <p className="text-xs text-[#4a4a48]">Sem compromisso · 100% gratuito</p>

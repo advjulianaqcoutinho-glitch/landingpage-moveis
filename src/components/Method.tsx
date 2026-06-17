@@ -103,6 +103,10 @@ export default function Method() {
             O método foi desenvolvido especificamente para lojas de móveis planejados com ticket médio entre{" "}
             <span className="text-[#b48c5a]">R$15.000 e R$30.000</span>.
           </p>
+          <p className="text-[#6a6a68] text-sm mt-4">
+            No diagnóstico, eu avalio em qual dessas etapas sua loja está travada hoje e te mostro{" "}
+            <span className="text-[#b48c5a]">o que ajustar primeiro.</span>
+          </p>
         </motion.div>
       </div>
     </section>

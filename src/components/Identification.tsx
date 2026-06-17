@@ -51,9 +51,9 @@ export default function Identification() {
             Identificação
           </span>
           <h2 className="text-4xl md:text-5xl font-semibold text-[#f0ede8] leading-tight">
-            Você reconhece algum{" "}
+            Você se vê em algum{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a46e] to-[#8a6840]">
-              destes sinais?
+              desses cenários?
             </span>
           </h2>
         </motion.div>
@@ -82,8 +82,8 @@ export default function Identification() {
           transition={{ duration: 0.7, delay: 0.7 }}
           className="text-center text-[#4a4a48] text-sm mt-12"
         >
-          Se você se identificou com pelo menos um destes pontos,{" "}
-          <span className="text-[#b48c5a]">você está no lugar certo.</span>
+          Se você se viu em 2 ou mais desses pontos,{" "}
+          <span className="text-[#b48c5a]">o diagnóstico vai te mostrar exatamente onde está o problema.</span>
         </motion.p>
       </div>
     </section>

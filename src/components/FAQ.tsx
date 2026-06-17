@@ -6,13 +6,38 @@ import { useRef, useState } from "react";
 import { Plus } from "lucide-react";
 
 const faqs = [
-  { q: "Já investi em anúncios antes e não tive resultado. Como isso é diferente?", a: "A maioria das agências de tráfego pago trabalha com volume: geram muitos leads baratos sem qualidade. O Método Projeto Fechado™ é o oposto. Trabalhamos com segmentação cirúrgica — alcançamos pessoas que estão ativamente em obra ou reforma, com o orçamento e o momento certos. Antes de qualquer investimento, fazemos um diagnóstico da sua operação para garantir que o sistema vai funcionar no seu caso específico." },
-  { q: "Minha cidade é pequena. Isso funciona para mim?", a: "Sim. O método foi validado em cidades de diferentes portes. Em cidades menores, a vantagem é ainda maior: a concorrência geralmente não usa estratégias estruturadas, o que significa que quem chegar primeiro com um sistema eficiente vai dominar o mercado local." },
-  { q: "Quanto tempo leva para ver os primeiros resultados?", a: "Os primeiros resultados aparecem em 30 a 60 dias após a implementação completa do sistema. O que posso garantir é que você vai ter mais clareza e controle desde o primeiro dia — sem mais depender da sorte ou das indicações." },
-  { q: "Preciso ter uma equipe de marketing para isso funcionar?", a: "Não. O sistema foi desenhado para funcionar mesmo sem equipe de marketing interna. Você precisa de uma pessoa para atender os leads qualificados que chegam — e isso geralmente já está coberto pela sua equipe comercial atual." },
-  { q: "Como funciona a parceria? Qual é o investimento?", a: "Cada projeto é personalizado de acordo com o tamanho da sua loja, mercado e objetivos. O diagnóstico gratuito existe justamente para entendermos sua situação real e apresentar uma proposta que faça sentido para o seu momento. Se não identificarmos uma oportunidade clara de crescimento, dizemos isso na hora." },
-  { q: "Trabalham com qualquer tipo de loja de móveis?", a: "Trabalhamos exclusivamente com lojas de móveis planejados com faturamento acima de R$50 mil mensais e ticket médio a partir de R$10 mil. Essa escolha é porque é onde conseguimos gerar o maior retorno sobre investimento." },
-  { q: "Vocês garantem resultados?", a: "Nenhuma empresa séria garante resultados específicos em marketing — quem faz isso está mentindo. O que garantimos é um método comprovado, transparência total no processo e dedicação completa ao seu crescimento." },
+  {
+    q: "O que é o diagnóstico gratuito e como funciona?",
+    a: "É uma conversa de 30 a 45 minutos onde avaliamos sua operação atual: quantos leads chegam, de onde vêm, qual a taxa de conversão, onde estão os gargalos. No final, você sai com clareza sobre o que está travando o crescimento da sua loja — independente de fecharmos ou não. O primeiro passo é agendar seu diagnóstico gratuito.",
+  },
+  {
+    q: "Já investi em anúncios antes e não tive resultado. Como isso é diferente?",
+    a: "A maioria das agências trabalha com volume: muitos leads baratos sem qualidade. O Método Projeto Fechado™ é o oposto — segmentação cirúrgica para pessoas que estão ativamente em obra ou reforma, com o orçamento e o momento certos. Antes de qualquer investimento, fazemos um diagnóstico da sua operação. O primeiro passo é agendar seu diagnóstico gratuito.",
+  },
+  {
+    q: "Minha cidade é pequena. Isso funciona para mim?",
+    a: "Sim. Em cidades menores, a vantagem é ainda maior: a concorrência geralmente não usa estratégias estruturadas, o que significa que quem chegar primeiro com um sistema eficiente domina o mercado local. O primeiro passo é agendar seu diagnóstico gratuito.",
+  },
+  {
+    q: "Quanto tempo leva para ver os primeiros resultados?",
+    a: "Os primeiros resultados aparecem em 30 a 60 dias após a implementação completa do sistema. O que garantimos é mais clareza e controle desde o primeiro dia — sem mais depender da sorte ou das indicações. O primeiro passo é agendar seu diagnóstico gratuito.",
+  },
+  {
+    q: "Preciso ter uma equipe de marketing para isso funcionar?",
+    a: "Não. O sistema foi desenhado para funcionar mesmo sem equipe de marketing interna. Você precisa de uma pessoa para atender os leads qualificados que chegam — e isso geralmente já está coberto pela sua equipe comercial atual. O primeiro passo é agendar seu diagnóstico gratuito.",
+  },
+  {
+    q: "Como funciona a parceria? Qual é o investimento?",
+    a: "Cada projeto é personalizado de acordo com o tamanho da sua loja, mercado e objetivos. O diagnóstico existe justamente para entendermos sua situação real e apresentar uma proposta que faça sentido para o seu momento. Se não identificarmos uma oportunidade clara de crescimento, dizemos isso na hora. O primeiro passo é agendar seu diagnóstico gratuito.",
+  },
+  {
+    q: "Trabalham com qualquer tipo de loja de móveis?",
+    a: "Trabalhamos exclusivamente com lojas de móveis planejados com faturamento acima de R$50 mil mensais e ticket médio a partir de R$10 mil. Essa escolha é porque é onde conseguimos gerar o maior retorno sobre investimento. O primeiro passo é agendar seu diagnóstico gratuito.",
+  },
+  {
+    q: "Vocês garantem resultados?",
+    a: "Nenhuma empresa séria garante resultados específicos em marketing — quem faz isso está mentindo. O que garantimos é um método comprovado, transparência total no processo e dedicação completa ao seu crescimento. O primeiro passo é agendar seu diagnóstico gratuito.",
+  },
 ];
 
 function FAQItem({ q, a, index, inView }: { q: string; a: string; index: number; inView: boolean }) {
