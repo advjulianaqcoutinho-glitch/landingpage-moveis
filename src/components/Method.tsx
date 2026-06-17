@@ -8,29 +8,29 @@ const steps = [
   {
     number: "01",
     title: "Atrair",
-    subtitle: "Pessoas em obra ou reforma",
-    desc: "Identificamos e atraímos pessoas que estão ativamente planejando uma reforma — o momento exato de compra.",
+    subtitle: "Pessoas em obra ou reforma na sua região",
+    desc: "Anúncios no Meta/Google focados em quem já decidiu comprar planejados, não em curioso que só quer \"dar uma olhadinha\".",
     color: "from-[#c9a46e] to-[#a07040]",
   },
   {
     number: "02",
     title: "Filtrar",
     subtitle: "Curiosos e não qualificados",
-    desc: "Mecanismos automáticos eliminam quem não tem intenção, capacidade ou timing de compra.",
+    desc: "Filtro Anti-Curioso que afasta quem não está pronto e destaca quem realmente pode virar projeto.",
     color: "from-[#b48c5a] to-[#8a6840]",
   },
   {
     number: "03",
     title: "Gerar",
-    subtitle: "Oportunidades reais",
-    desc: "Leads qualificados chegam prontos para receber seu orçamento, com expectativa alinhada.",
+    subtitle: "Oportunidades reais para o seu time",
+    desc: "Entregamos para sua equipe contatos com contexto, dados e urgência — não só \"nome e telefone frio\".",
     color: "from-[#a07848] to-[#785030]",
   },
   {
     number: "04",
     title: "Fechar",
-    subtitle: "Transformar em projetos",
-    desc: "Processo comercial estruturado para converter oportunidades em contratos assinados.",
+    subtitle: "Transformar em projetos de alto valor",
+    desc: "Roteiro de WhatsApp e acompanhamento do funil para aumentar visitas, propostas e projetos fechados.",
     color: "from-[#8a6438] to-[#604820]",
   },
 ];
@@ -100,8 +100,9 @@ export default function Method() {
           className="mt-16 p-6 rounded-2xl border border-[rgba(180,140,90,0.12)] bg-[rgba(180,140,90,0.03)] text-center"
         >
           <p className="text-[#6a6a68] text-sm">
-            O método foi desenvolvido especificamente para lojas de móveis planejados com ticket médio entre{" "}
-            <span className="text-[#b48c5a]">R$15.000 e R$30.000</span>.
+            Desenvolvido para lojas com ticket médio acima de{" "}
+            <span className="text-[#b48c5a]">R$15.000</span>{" "}e faturamento mínimo de{" "}
+            <span className="text-[#b48c5a]">R$50.000/mês</span>.
           </p>
         </motion.div>
       </div>

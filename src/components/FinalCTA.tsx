@@ -30,14 +30,14 @@ export default function FinalCTA({ onCTA }: FinalCTAProps) {
           </span>
 
           <h2 className="text-4xl md:text-6xl font-semibold text-[#f0ede8] leading-tight">
-            Pronto para ter uma{" "}
+            Pronto para ter uma entrada{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a46e] to-[#8a6840]">
-              loja previsível?
+              previsível de projetos?
             </span>
           </h2>
 
           <p className="text-[#6a6a68] text-lg max-w-xl mx-auto leading-relaxed">
-            Responda o diagnóstico gratuito e descubra exatamente o que está impedindo sua loja de crescer de forma consistente.
+            Responda ao diagnóstico gratuito e receba um plano de 40 dias mostrando de onde podem vir seus próximos projetos pela internet, o que está travando seus resultados e quais ajustes fazer para reduzir curiosos e aumentar projetos fechados.
           </p>
 
           <motion.button
@@ -46,7 +46,7 @@ export default function FinalCTA({ onCTA }: FinalCTAProps) {
             whileTap={{ scale: 0.98 }}
             className="group relative inline-flex items-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-[#c9a46e] to-[#b48c5a] text-[#080808] font-semibold text-lg overflow-hidden transition-all duration-300 shadow-[0_0_60px_rgba(180,140,90,0.3)]"
           >
-            <span className="relative z-10">Receber meu plano gratuito</span>
+            <span className="relative z-10">Quero saber mais</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#d4b07a] to-[#c9a46e] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.button>
 

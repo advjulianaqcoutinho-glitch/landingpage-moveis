@@ -27,7 +27,7 @@ export default function MobileCTA({ onCTA }: MobileCTAProps) {
         onClick={onCTA}
         className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#c9a46e] to-[#b48c5a] text-[#080808] font-semibold text-base shadow-[0_0_40px_rgba(180,140,90,0.4)]"
       >
-        Receber meu plano gratuito
+        Quero saber mais — é gratuito
       </button>
     </motion.div>
   );

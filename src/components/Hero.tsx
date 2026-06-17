@@ -66,7 +66,7 @@ export default function Hero({ onCTA }: HeroProps) {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(180,140,90,0.25)] bg-[rgba(180,140,90,0.06)] text-[#b48c5a] text-sm font-medium mb-10 backdrop-blur-sm"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#b48c5a] animate-pulse" />
-          Especialista em crescimento para lojas de móveis planejados
+          Sistema de clientes para lojas de móveis planejados
         </motion.div>
 
         {/* Headline */}
@@ -85,6 +85,7 @@ export default function Hero({ onCTA }: HeroProps) {
           <span className="text-[#f0ede8]"> ou</span>
           <br />
           <span className="text-[#f0ede8]">curiosos?</span>
+
         </motion.h1>
 
         {/* Subheadline */}
@@ -94,8 +95,8 @@ export default function Hero({ onCTA }: HeroProps) {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="text-lg md:text-xl text-[#8a8880] max-w-2xl mx-auto leading-relaxed mb-10"
         >
-          Ajudo lojas de móveis planejados a gerar mais oportunidades reais, reduzir a
-          dependência de indicação e aumentar a quantidade de projetos fechados.
+          Ajudo lojas de móveis planejados a fechar mais projetos de R$15k–R$30k por mês,
+          usando anúncios + filtro anti-curioso, sem depender de indicação.
         </motion.p>
 
         {/* Bullets */}
@@ -105,7 +106,7 @@ export default function Hero({ onCTA }: HeroProps) {
           transition={{ duration: 0.6, delay: 0.45 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-12"
         >
-          {["Mais orçamentos qualificados", "Menos curiosos", "Mais projetos fechados"].map((item) => (
+          {["Mais orçamentos de clientes em obra/reforma", "Menos curiosos enchendo o WhatsApp", "Mais projetos de alto valor fechados todo mês"].map((item) => (
             <div key={item} className="flex items-center gap-2 text-sm text-[#a0a098]">
               <span className="text-[#b48c5a] font-semibold">✓</span>
               <span>{item}</span>
@@ -126,10 +127,10 @@ export default function Hero({ onCTA }: HeroProps) {
             whileTap={{ scale: 0.98 }}
             className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-[#c9a46e] to-[#b48c5a] text-[#080808] font-semibold text-base overflow-hidden transition-all duration-300 shadow-[0_0_40px_rgba(180,140,90,0.25)]"
           >
-            <span className="relative z-10">Receber meu plano gratuito</span>
+            <span className="relative z-10">Quero saber mais</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#d4b07a] to-[#c9a46e] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.button>
-          <p className="text-xs text-[#4a4a48]">Sem compromisso · 100% gratuito</p>
+          <p className="text-xs text-[#4a4a48]">Descubra como aumentar projetos vindos da internet · Sem compromisso · 100% gratuito</p>
         </motion.div>
 
         {/* Scroll indicator */}

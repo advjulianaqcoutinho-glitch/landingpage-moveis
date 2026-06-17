@@ -62,9 +62,9 @@ export default function About({ onCTA }: { onCTA: () => void }) {
               </h2>
             </div>
             <div className="space-y-4 text-[#6a6a68] leading-relaxed">
-              <p>Passei anos estudando por que lojas de móveis planejados com excelentes produtos não conseguiam crescer de forma consistente. A resposta era sempre a mesma: <span className="text-[#a0a098]">dependência de indicação e falta de um sistema previsível de geração de oportunidades.</span></p>
-              <p>Desenvolvi o <span className="text-[#b48c5a] font-medium">Método Projeto Fechado™</span> especificamente para resolver esse problema. Não é tráfego pago genérico. É um sistema completo que atrai, filtra e converte pessoas que estão <span className="text-[#a0a098]">ativamente planejando uma reforma</span>.</p>
-              <p>Trabalho exclusivamente com lojas de móveis planejados com faturamento acima de R$50 mil mensais, porque é onde consigo gerar o maior impacto e os resultados mais expressivos.</p>
+              <p>Passei anos vendo lojas com excelente produto e atendimento ficarem reféns de indicação e meses de sorte. <span className="text-[#a0a098]">O problema nunca foi o móvel — foi a falta de um sistema previsível de entrada de clientes.</span></p>
+              <p>Desenvolvi o <span className="text-[#b48c5a] font-medium">Método Projeto Fechado™</span> com um foco só: ajudar lojas de planejados a <span className="text-[#a0a098]">transformarem internet em projetos fechados</span>.</p>
+              <p>Trabalho exclusivamente com lojas de móveis planejados com faturamento acima de R$50 mil mensais e ticket médio acima de R$15 mil — porque é onde consigo gerar o maior impacto real.</p>
             </div>
             <div className="grid grid-cols-3 gap-4 pt-4">
               {credentials.map((c, i) => (

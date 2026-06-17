@@ -25,7 +25,7 @@ export default function Navbar({ onCTA }: NavbarProps) {
           whileTap={{ scale: 0.98 }}
           className="hidden sm:flex px-5 py-2.5 rounded-full bg-gradient-to-r from-[#c9a46e] to-[#b48c5a] text-[#080808] font-semibold text-sm shadow-[0_0_20px_rgba(180,140,90,0.2)]"
         >
-          Diagnóstico gratuito
+          Quero saber mais
         </motion.button>
       </div>
     </motion.header>

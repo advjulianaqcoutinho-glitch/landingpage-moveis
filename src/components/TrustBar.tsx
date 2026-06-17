@@ -5,11 +5,11 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const items = [
-  { icon: "🔒", text: "Sem contratos longos" },
-  { icon: "🎯", text: "Só para lojas acima de R$50k/mês" },
-  { icon: "💬", text: "Retorno em até 24h" },
-  { icon: "🚫", text: "Sem promessas vazias" },
-  { icon: "✅", text: "Método comprovado" },
+  { icon: "🔒", text: "Sem fidelidade longa (início com 3 meses)" },
+  { icon: "🎯", text: "Apenas para lojas com faturamento mínimo de R$50k/mês" },
+  { icon: "💬", text: "Suporte com retorno em até 24h úteis" },
+  { icon: "🚫", text: "Nada de garantias milagrosas ou números inventados" },
+  { icon: "✅", text: "Método aplicado exclusivamente em lojas de planejados" },
 ];
 
 export default function TrustBar() {

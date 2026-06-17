@@ -5,11 +5,11 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const rows = [
-  { label: "Origem dos clientes", traditional: "Depende de indicação", method: "Fluxo constante e previsível" },
-  { label: "Qualidade dos leads", traditional: "Muitos curiosos", method: "Mais qualificação prévia" },
-  { label: "Previsibilidade", traditional: "Meses bons e ruins", method: "Crescimento consistente" },
-  { label: "Equipe comercial", traditional: "Parada por falta de oportunidades", method: "Sempre com oportunidades reais" },
-  { label: "Controle", traditional: "Refém das indicações", method: "Estratégia sob seu controle" },
+  { label: "Origem dos clientes", traditional: "Depende de indicação e meses de sorte", method: "Sistema para gerar demanda fora da indicação" },
+  { label: "Estratégia de anúncios", traditional: "Anúncios genéricos focados em likes e cliques", method: "Anúncios focados em quem já está em obra ou reforma" },
+  { label: "Qualidade dos leads", traditional: "Leads frios e curiosos caindo direto no WhatsApp", method: "Filtro anti-curioso antes do contato com o time" },
+  { label: "Atendimento comercial", traditional: "SDR/vendedores gastando tempo com quem nunca vai fechar", method: "Roteiro de atendimento pensado para projetos de R$15k–R$30k" },
+  { label: "Acompanhamento", traditional: "Nenhum controle real sobre projetos vindos da internet", method: "Acompanhamento mensal de leads, visitas, propostas e projetos" },
 ];
 
 export default function Comparison() {

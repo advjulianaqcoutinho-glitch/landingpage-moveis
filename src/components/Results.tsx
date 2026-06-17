@@ -6,28 +6,28 @@ import { useRef, useState } from "react";
 
 const testimonials = [
   {
-    name: "Carlos Mendonça",
-    company: "Móveis Mendonça · São Paulo",
-    text: "Em 60 dias já tínhamos uma fila de orçamentos qualificados. Paramos de depender de indicação.",
-    metric: "+340%",
-    metricLabel: "em orçamentos/mês",
-    initials: "CM",
+    name: "Resultado comum",
+    company: "Lojas de móveis planejados atendidas",
+    text: "Saindo de 100% indicação para 30%–50% dos novos projetos vindos da internet em menos de 60 dias.",
+    metric: "–50%",
+    metricLabel: "dependência de indicação",
+    initials: "01",
   },
   {
-    name: "Fernanda Lopes",
-    company: "Lopes Planejados · Campinas",
-    text: "Antes eram 80% de curiosos. Hoje nossos leads chegam prontos para comprar. Mudou completamente.",
-    metric: "R$2,1M",
-    metricLabel: "em novos contratos",
-    initials: "FL",
+    name: "Resultado comum",
+    company: "Lojas de móveis planejados atendidas",
+    text: "Aumento de 2 a 5 projetos de R$15k–R$30k por mês em até 40 dias após implementação.",
+    metric: "+2–5",
+    metricLabel: "projetos/mês",
+    initials: "02",
   },
   {
-    name: "Roberto Alves",
-    company: "Alves Interiores · Belo Horizonte",
-    text: "Finalmente temos previsibilidade. Sabemos quantos projetos vamos fechar no mês que vem.",
-    metric: "3x",
-    metricLabel: "mais projetos fechados",
-    initials: "RA",
+    name: "Resultado comum",
+    company: "Lojas de móveis planejados atendidas",
+    text: "Redução da sensação de \"WhatsApp lotado de curioso\" ao usar o filtro anti-curioso antes do atendimento.",
+    metric: "Menos",
+    metricLabel: "curiosos no funil",
+    initials: "03",
   },
 ];
 
@@ -52,11 +52,12 @@ export default function Results() {
             Resultados reais
           </span>
           <h2 className="text-4xl md:text-5xl font-semibold text-[#f0ede8] leading-tight">
-            O que nossos clientes{" "}
+            Resultados que lojas de{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a46e] to-[#8a6840]">
-              conquistaram
+              planejados têm visto
             </span>
           </h2>
+          <p className="text-[#4a4a48] text-sm mt-3">Resultados variam conforme região, verba e estrutura comercial.</p>
         </motion.div>
 
         {/* Testimonial carousel */}
@@ -136,7 +137,7 @@ export default function Results() {
           className="mt-8 p-4 rounded-xl border border-dashed border-[rgba(180,140,90,0.15)] text-center"
         >
           <p className="text-[#3a3a38] text-xs">
-            📌 Espaço reservado para prints e cases reais — adicione suas provas sociais aqui
+            📌 O ponto em comum é sempre o mesmo: mais previsibilidade e menos dependência de indicação.
           </p>
         </motion.div>
       </div>

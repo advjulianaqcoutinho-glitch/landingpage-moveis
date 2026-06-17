@@ -8,27 +8,27 @@ const problems = [
   {
     icon: "🤝",
     title: "A maioria dos clientes vem por indicação",
-    desc: "Quando as indicações secam, o caixa também seca. Sem controle, sem previsibilidade.",
+    desc: "Quando as indicações secam, o caixa e a agenda de projetos também secam.",
   },
   {
     icon: "📈",
-    title: "Alguns meses bons, outros ruins",
-    desc: "A montanha-russa financeira impede o crescimento e gera estresse constante.",
+    title: "Alguns meses muito bons, outros quase sem movimento",
+    desc: "Essa montanha-russa impede o crescimento e gera estresse constante.",
   },
   {
     icon: "👻",
-    title: "Muitos pedem orçamento e desaparecem",
-    desc: "Tempo e energia perdidos com pessoas que nunca tinham intenção real de comprar.",
+    title: "Muitos pedem orçamento e somem",
+    desc: "Horas investidas em quem nunca teve intenção real de fechar.",
   },
   {
     icon: "💤",
-    title: "Equipe comercial parada",
-    desc: "Bons vendedores sem oportunidades. Potencial desperdiçado todo mês.",
+    title: "Equipe comercial parada em vários momentos do mês",
+    desc: "Bons vendedores sem agenda cheia. Potencial desperdiçado.",
   },
   {
     icon: "💸",
     title: "Já investiu em anúncios sem resultado",
-    desc: "Dinheiro jogado fora. Promessas que não se cumpriram. Ceticismo que ficou.",
+    desc: "Dinheiro jogado fora, promessas que não se cumpriram e um pé atrás com qualquer \"especialista em tráfego\".",
   },
 ];
 
@@ -82,8 +82,8 @@ export default function Identification() {
           transition={{ duration: 0.7, delay: 0.7 }}
           className="text-center text-[#4a4a48] text-sm mt-12"
         >
-          Se você se identificou com pelo menos um destes pontos,{" "}
-          <span className="text-[#b48c5a]">você está no lugar certo.</span>
+          Se você se viu em 2 ou mais desses pontos,{" "}
+          <span className="text-[#b48c5a]">esta página foi feita pra você.</span>
         </motion.p>
       </div>
     </section>
