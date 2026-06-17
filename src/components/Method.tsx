@@ -104,6 +104,10 @@ export default function Method() {
             <span className="text-[#b48c5a]">R$15.000</span>{" "}e faturamento mínimo de{" "}
             <span className="text-[#b48c5a]">R$50.000/mês</span>.
           </p>
+          <p className="text-[#6a6a68] text-sm mt-4">
+            No diagnóstico, eu avalio em qual dessas etapas sua loja está travada hoje e te mostro{" "}
+            <span className="text-[#b48c5a]">o que ajustar primeiro.</span>
+          </p>
         </motion.div>
       </div>
     </section>

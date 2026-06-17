@@ -29,15 +29,16 @@ export default function FinalCTA({ onCTA }: FinalCTAProps) {
             Próximo passo
           </span>
 
-          <h2 className="text-4xl md:text-6xl font-semibold text-[#f0ede8] leading-tight">
-            Pronto para ter uma entrada{" "}
+          <h2 className="text-4xl md:text-5xl font-semibold text-[#f0ede8] leading-tight">
+            Pronto para saber exatamente o que está{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a46e] to-[#8a6840]">
-              previsível de projetos?
-            </span>
+              travando a entrada de projetos
+            </span>{" "}
+            na sua loja?
           </h2>
 
           <p className="text-[#6a6a68] text-lg max-w-xl mx-auto leading-relaxed">
-            Responda ao diagnóstico gratuito e receba um plano de 40 dias mostrando de onde podem vir seus próximos projetos pela internet, o que está travando seus resultados e quais ajustes fazer para reduzir curiosos e aumentar projetos fechados.
+            O diagnóstico gratuito revela os gargalos reais da sua operação — sem enrolação, sem compromisso.
           </p>
 
           <motion.button
@@ -46,7 +47,7 @@ export default function FinalCTA({ onCTA }: FinalCTAProps) {
             whileTap={{ scale: 0.98 }}
             className="group relative inline-flex items-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-[#c9a46e] to-[#b48c5a] text-[#080808] font-semibold text-lg overflow-hidden transition-all duration-300 shadow-[0_0_60px_rgba(180,140,90,0.3)]"
           >
-            <span className="relative z-10">Quero saber mais</span>
+            <span className="relative z-10">Agendar meu Diagnóstico</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#d4b07a] to-[#c9a46e] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.button>
 

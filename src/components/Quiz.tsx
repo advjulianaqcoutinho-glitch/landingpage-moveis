@@ -73,16 +73,16 @@ export default function Quiz({ isOpen, onClose }: QuizProps) {
   const handleWhatsApp = () => {
     const a = answers;
     const msg = encodeURIComponent(
-      `Olá Igor! Acabei de responder o diagnóstico. Minhas informações:\n\n` +
+      `Olá Igor! Preenchi o formulário e quero agendar meu diagnóstico.\n\n` +
       `👤 Nome: ${a.name || ""}\n` +
       `🏪 Loja: ${a.company || ""}\n` +
       `📍 Cidade: ${a.city || ""}\n` +
       `📊 Projetos/mês: ${a.projects || ""}\n` +
       `💰 Ticket médio: ${a.ticket || ""}\n` +
-      `📣 Origem dos clientes: ${a.origin || ""}\n` +
+      `📣 Como clientes chegam: ${a.origin || ""}\n` +
       `🎯 Maior desafio: ${a.challenge || ""}\n` +
       `📈 Investimento em marketing: ${a.marketing || ""}\n` +
-      `✅ Interesse em investir: ${a.interest || ""}`
+      `✅ Pronto para investir: ${a.interest || ""}`
     );
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank");
   };
@@ -122,7 +122,7 @@ export default function Quiz({ isOpen, onClose }: QuizProps) {
             <div className="flex items-center justify-between mb-4">
               <div>
                 <span className="text-[#b48c5a] text-xs font-medium tracking-widest uppercase">
-                  {isDataStep ? "Quase lá" : "Diagnóstico gratuito"}
+                  {isDataStep ? "Quase lá" : "Passo 1 para agendar seu diagnóstico"}
                 </span>
                 {isDataStep && <p className="text-[#4a4a48] text-xs mt-0.5">Precisamos dos seus dados para enviar a análise</p>}
               </div>
@@ -160,8 +160,8 @@ export default function Quiz({ isOpen, onClose }: QuizProps) {
                 >
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a46e] to-[#8a6840] flex items-center justify-center mx-auto text-2xl">✓</div>
                   <div>
-                    <h3 className="text-2xl font-semibold text-[#f0ede8] mb-2">Diagnóstico concluído!</h3>
-                    <p className="text-[#6a6a68] leading-relaxed text-sm">Identificamos oportunidades de crescimento para sua loja. Clique abaixo para receber sua análise personalizada.</p>
+                    <h3 className="text-2xl font-semibold text-[#f0ede8] mb-2">Perfeito!</h3>
+                    <p className="text-[#6a6a68] leading-relaxed text-sm">Vou te chamar no WhatsApp pra marcar seu diagnóstico. Clique abaixo para me enviar suas respostas.</p>
                   </div>
                   <motion.button
                     onClick={handleWhatsApp}

@@ -79,6 +79,26 @@ export default function Comparison() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.9 }}
+          className="mt-14 text-center space-y-6"
+        >
+          <p className="text-[#6a6a68] max-w-xl mx-auto leading-relaxed">
+            Essa diferença não aparece do dia pra noite — ela começa com entender onde exatamente sua loja está perdendo oportunidades.{" "}
+            <span className="text-[#a0a098]">É exatamente isso que o diagnóstico revela.</span>
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#c9a46e] to-[#b48c5a] text-[#080808] font-semibold text-base shadow-[0_0_40px_rgba(180,140,90,0.25)]"
+            onClick={() => document.dispatchEvent(new CustomEvent("openQuiz"))}
+          >
+            Agendar meu Diagnóstico
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import Navbar from "@/components/Navbar";
+import { useState, useEffect } from "react";
 import Hero from "@/components/Hero";
 import Identification from "@/components/Identification";
 import Method from "@/components/Method";
@@ -20,11 +19,16 @@ export default function Home() {
   const [quizOpen, setQuizOpen] = useState(false);
   const openQuiz = () => setQuizOpen(true);
 
+  useEffect(() => {
+    const handler = () => setQuizOpen(true);
+    document.addEventListener("openQuiz", handler);
+    return () => document.removeEventListener("openQuiz", handler);
+  }, []);
+
   return (
     <>
       <div className="grain-overlay" />
-      <Navbar onCTA={openQuiz} />
-      <main className="pt-16">
+      <main>
         <Hero onCTA={openQuiz} />
         <Identification />
         <Method />

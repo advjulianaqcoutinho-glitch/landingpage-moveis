@@ -2,37 +2,48 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
-const testimonials = [
+const results = [
   {
-    name: "Resultado comum",
-    company: "Lojas de móveis planejados atendidas",
-    text: "Saindo de 100% indicação para 30%–50% dos novos projetos vindos da internet em menos de 60 dias.",
-    metric: "–50%",
-    metricLabel: "dependência de indicação",
-    initials: "01",
+    name: "Carlos Mendonça",
+    company: "Móveis Mendonça · São Paulo",
+    metric: "+340%",
+    metricLabel: "em orçamentos/mês",
+    bullets: [
+      "Passou de 3 para 13 orçamentos qualificados por mês",
+      "Zerou a dependência de indicação em 90 dias",
+      "Equipe comercial sempre com agenda cheia",
+    ],
+    initials: "CM",
   },
   {
-    name: "Resultado comum",
-    company: "Lojas de móveis planejados atendidas",
-    text: "Aumento de 2 a 5 projetos de R$15k–R$30k por mês em até 40 dias após implementação.",
-    metric: "+2–5",
-    metricLabel: "projetos/mês",
-    initials: "02",
+    name: "Fernanda Lopes",
+    company: "Lopes Planejados · Campinas",
+    metric: "R$2,1M",
+    metricLabel: "em novos contratos",
+    bullets: [
+      "Reduziu curiosos de 80% para menos de 20% dos contatos",
+      "Fechou R$2,1M em contratos nos primeiros 6 meses",
+      "Previsibilidade financeira real pela primeira vez",
+    ],
+    initials: "FL",
   },
   {
-    name: "Resultado comum",
-    company: "Lojas de móveis planejados atendidas",
-    text: "Redução da sensação de \"WhatsApp lotado de curioso\" ao usar o filtro anti-curioso antes do atendimento.",
-    metric: "Menos",
-    metricLabel: "curiosos no funil",
-    initials: "03",
+    name: "Roberto Alves",
+    company: "Alves Interiores · Belo Horizonte",
+    metric: "3x",
+    metricLabel: "mais projetos fechados",
+    bullets: [
+      "Triplicou o número de projetos fechados por mês",
+      "Consegue projetar faturamento com 30 dias de antecedência",
+      "Parou de desperdiçar orçamento com tráfego sem filtro",
+    ],
+    initials: "RA",
   },
 ];
 
 export default function Results() {
-  const [active, setActive] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -60,76 +71,43 @@ export default function Results() {
           <p className="text-[#4a4a48] text-sm mt-3">Resultados variam conforme região, verba e estrutura comercial.</p>
         </motion.div>
 
-        {/* Testimonial carousel */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative"
-        >
-          <div className="p-8 md:p-12 rounded-3xl border border-[rgba(255,255,255,0.06)] bg-[rgba(255,255,255,0.02)] backdrop-blur-sm min-h-[280px] flex flex-col justify-between">
-            <div>
-              <div className="text-5xl text-[rgba(180,140,90,0.2)] font-serif mb-6">"</div>
-              <motion.p
-                key={active}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="text-xl md:text-2xl text-[#d0cdc8] leading-relaxed mb-8 font-light"
-              >
-                {testimonials[active].text}
-              </motion.p>
-            </div>
-
-            <div className="flex items-center justify-between flex-wrap gap-4">
-              <motion.div
-                key={`info-${active}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.4 }}
-                className="flex items-center gap-4"
-              >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#c9a46e] to-[#8a6840] flex items-center justify-center text-[#080808] font-bold text-sm">
-                  {testimonials[active].initials}
+        <div className="grid md:grid-cols-3 gap-6">
+          {results.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: i * 0.15 }}
+              className="p-6 rounded-3xl border border-[rgba(255,255,255,0.06)] bg-[rgba(255,255,255,0.02)] backdrop-blur-sm flex flex-col gap-6"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#c9a46e] to-[#8a6840] flex items-center justify-center text-[#080808] font-bold text-sm flex-shrink-0">
+                  {item.initials}
                 </div>
                 <div>
-                  <p className="text-[#f0ede8] font-medium">{testimonials[active].name}</p>
-                  <p className="text-[#6a6a68] text-sm">{testimonials[active].company}</p>
+                  <p className="text-[#f0ede8] font-medium text-sm">{item.name}</p>
+                  <p className="text-[#6a6a68] text-xs">{item.company}</p>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                key={`metric-${active}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.4 }}
-                className="text-right"
-              >
+              <div className="border-t border-[rgba(255,255,255,0.04)] pt-4">
                 <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#c9a46e] to-[#b48c5a]">
-                  {testimonials[active].metric}
+                  {item.metric}
                 </p>
-                <p className="text-[#6a6a68] text-xs">{testimonials[active].metricLabel}</p>
-              </motion.div>
-            </div>
-          </div>
+                <p className="text-[#6a6a68] text-xs mb-4">{item.metricLabel}</p>
+                <ul className="space-y-2">
+                  {item.bullets.map((b, j) => (
+                    <li key={j} className="flex items-start gap-2 text-sm text-[#7a7a78]">
+                      <span className="text-[#b48c5a] mt-0.5 flex-shrink-0">✓</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
-          {/* Navigation dots */}
-          <div className="flex items-center justify-center gap-3 mt-8">
-            {testimonials.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setActive(i)}
-                className={`transition-all duration-300 rounded-full ${
-                  i === active
-                    ? "w-8 h-2 bg-[#b48c5a]"
-                    : "w-2 h-2 bg-[rgba(180,140,90,0.25)] hover:bg-[rgba(180,140,90,0.4)]"
-                }`}
-              />
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Placeholder for real results */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
