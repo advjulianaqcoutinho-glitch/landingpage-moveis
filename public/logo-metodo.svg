@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" fill="none">
+  <!-- Icon mark -->
+  <rect x="0" y="0" width="48" height="48" rx="10" fill="url(#grad)"/>
+  <path d="M14 34 L24 14 L34 34" stroke="#0f0e0c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M18 27 L30 27" stroke="#0f0e0c" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="24" cy="14" r="2.5" fill="#0f0e0c"/>
+  <!-- Text -->
+  <text x="60" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#c9a46e" letter-spacing="2">MÉTODO</text>
+  <text x="60" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f0ede8" letter-spacing="0.5">Projeto Fechado™</text>
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#c9a46e"/>
+      <stop offset="100%" stop-color="#8a6840"/>
+    </linearGradient>
+  </defs>
+</svg>

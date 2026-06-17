@@ -11,12 +11,16 @@ export const metadata: Metadata = {
   title: "Igor Pacheco | Especialista em Crescimento para Lojas de Móveis Planejados",
   description:
     "Ajudo lojas de móveis planejados a gerar mais orçamentos qualificados, reduzir curiosos e diminuir a dependência de indicação.",
-  keywords: ["móveis planejados", "marketing móveis", "crescimento loja móveis", "Igor Pacheco"],
+  keywords: ["móveis planejados", "marketing móveis", "crescimento loja móveis", "Igor Pacheco", "Método Projeto Fechado"],
   openGraph: {
     title: "Igor Pacheco | Especialista em Crescimento para Lojas de Móveis Planejados",
     description:
       "Ajudo lojas de móveis planejados a gerar mais orçamentos qualificados, reduzir curiosos e diminuir a dependência de indicação.",
     type: "website",
+  },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
   },
 };
 
