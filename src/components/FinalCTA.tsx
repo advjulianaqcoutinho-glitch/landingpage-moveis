@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 interface FinalCTAProps {
@@ -10,26 +9,26 @@ interface FinalCTAProps {
 
 export default function FinalCTA({ onCTA }: FinalCTAProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="py-32 px-6 relative overflow-hidden">
+    <section ref={ref} className="py-20 md:py-32 px-5 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#080808] to-[#0a0908]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(180,140,90,0.05)_0%,transparent_70%)]" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-[rgba(180,140,90,0.2)] to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] md:w-[600px] h-[1px] bg-gradient-to-r from-transparent via-[rgba(180,140,90,0.2)] to-transparent" />
 
       <div className="relative max-w-3xl mx-auto text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="space-y-8"
+          className="space-y-6"
         >
-          <span className="text-[#b48c5a] text-sm font-medium tracking-widest uppercase block">
+          <span className="text-[#b48c5a] text-xs font-medium tracking-widest uppercase block">
             Próximo passo
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#f0ede8] leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#f0ede8] leading-tight">
             Pronto para saber exatamente o que está{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a46e] to-[#8a6840]">
               travando a entrada de projetos
@@ -37,21 +36,21 @@ export default function FinalCTA({ onCTA }: FinalCTAProps) {
             na sua loja?
           </h2>
 
-          <p className="text-[#6a6a68] text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#5a5a58] text-base max-w-lg mx-auto leading-relaxed">
             O diagnóstico gratuito revela os gargalos reais da sua operação — sem enrolação, sem compromisso.
           </p>
 
           <motion.button
             onClick={onCTA}
             whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="group relative inline-flex items-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-[#c9a46e] to-[#b48c5a] text-[#080808] font-semibold text-lg overflow-hidden transition-all duration-300 shadow-[0_0_60px_rgba(180,140,90,0.3)]"
+            whileTap={{ scale: 0.97 }}
+            className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-[#c9a46e] to-[#b48c5a] text-[#080808] font-bold text-lg overflow-hidden transition-all duration-300 shadow-[0_0_60px_rgba(180,140,90,0.3)]"
           >
             <span className="relative z-10">Agendar meu Diagnóstico</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#d4b07a] to-[#c9a46e] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.button>
 
-          <div className="flex items-center justify-center gap-8 text-sm text-[#3a3a38]">
+          <div className="flex items-center justify-center gap-6 text-xs text-[#3a3a38]">
             <span>✓ Sem compromisso</span>
             <span>✓ 100% gratuito</span>
             <span>✓ Resposta em 24h</span>

@@ -70,7 +70,7 @@ export default function FAQ() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section ref={ref} className="py-32 px-6 relative overflow-hidden">
+    <section ref={ref} className="py-20 md:py-32 px-5 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#0c0b09]" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-[rgba(180,140,90,0.2)] to-transparent" />
       <div className="relative max-w-3xl mx-auto">

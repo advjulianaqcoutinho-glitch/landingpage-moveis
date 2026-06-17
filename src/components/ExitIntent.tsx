@@ -53,12 +53,12 @@ export default function ExitIntent({ onCTA }: ExitIntentProps) {
               </button>
               <div className="text-4xl">⚠️</div>
               <div className="space-y-3">
-                <h3 className="text-2xl font-semibold text-[#f0ede8] leading-snug">Espera — você está saindo sem o seu plano gratuito</h3>
-                <p className="text-[#6a6a68] leading-relaxed text-sm">Leva menos de 2 minutos. Você vai descobrir exatamente o que está impedindo sua loja de crescer — sem custo, sem compromisso.</p>
+                <h3 className="text-2xl font-semibold text-[#f0ede8] leading-snug">Espera — você está saindo sem o seu diagnóstico</h3>
+                <p className="text-[#6a6a68] leading-relaxed text-sm">Em menos de 2 minutos você descobre exatamente onde sua loja está perdendo projetos — sem custo, sem compromisso.</p>
               </div>
               <div className="space-y-3">
                 <motion.button onClick={handleCTA} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full py-4 rounded-xl bg-gradient-to-r from-[#c9a46e] to-[#b48c5a] text-[#080808] font-semibold shadow-[0_0_30px_rgba(180,140,90,0.25)]">
-                  Quero saber mais — é gratuito
+                  Quero meu diagnóstico
                 </motion.button>
                 <button onClick={dismiss} className="w-full py-3 text-[#3a3a38] text-sm hover:text-[#6a6a68] transition-colors">
                   Não, prefiro continuar sem crescer
