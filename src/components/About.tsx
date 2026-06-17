@@ -1,8 +1,6 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import Image from "next/image";
 
 const credentials = [
   { number: "50+", label: "lojas atendidas" },
@@ -31,9 +29,8 @@ export default function About({ onCTA }: { onCTA: () => void }) {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[rgba(180,140,90,0.12)] to-transparent rounded-3xl blur-2xl scale-105" />
               <div className="relative rounded-3xl overflow-hidden border border-[rgba(180,140,90,0.15)] bg-[#1a1510]">
-                <div className="relative w-full" style={{ aspectRatio: "4/5" }}>
-                  <Image src="/igor.jpg" alt="Igor Pacheco" fill className="object-cover object-top" />
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/igor.jpg" alt="Igor Pacheco" className="w-full object-cover object-top" style={{ aspectRatio: "4/5" }} />
                 <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#080808] to-transparent" />
               </div>
               <motion.div
