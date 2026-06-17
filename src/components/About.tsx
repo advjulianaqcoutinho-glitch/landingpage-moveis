@@ -94,3 +94,4 @@ export default function About({ onCTA }: { onCTA: () => void }) {
     </section>
   );
 }
+
