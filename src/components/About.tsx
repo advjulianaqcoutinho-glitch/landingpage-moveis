@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const credentials = [
   { number: "50+", label: "lojas atendidas" },
