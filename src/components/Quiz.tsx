@@ -12,72 +12,16 @@ interface QuizProps {
 type Answers = Record<string, string>;
 
 const questions = [
-  {
-    id: "projects",
-    type: "choice",
-    label: "Quantos projetos você fecha por mês?",
-    options: ["0 a 2", "3 a 5", "6 a 10", "10 ou mais"],
-  },
-  {
-    id: "ticket",
-    type: "choice",
-    label: "Qual é o seu ticket médio?",
-    options: ["Até R$10 mil", "R$10 a R$20 mil", "R$20 a R$30 mil", "Acima de R$30 mil"],
-  },
-  {
-    id: "origin",
-    type: "choice",
-    label: "Como a maioria dos seus clientes chegam até você?",
-    options: ["Indicação", "Instagram", "Google", "Tráfego Pago", "Outros"],
-  },
-  {
-    id: "challenge",
-    type: "choice",
-    label: "Qual é o seu maior desafio hoje?",
-    options: [
-      "Poucos orçamentos",
-      "Muitos curiosos",
-      "Dependência de indicação",
-      "Baixa conversão",
-      "Falta de previsibilidade",
-    ],
-  },
-  {
-    id: "marketing",
-    type: "choice",
-    label: "Quanto você investe em marketing por mês?",
-    options: ["Nada", "Até R$500", "R$500 a R$1.500", "Acima de R$1.500"],
-  },
-  {
-    id: "interest",
-    type: "choice",
-    label: "Se identificarmos uma oportunidade clara de crescimento, você teria interesse em investir para implementá-la?",
-    options: ["Sim, estou pronto", "Talvez, dependendo do caso", "Ainda não"],
-  },
-  {
-    id: "name",
-    type: "text",
-    label: "Qual é o seu nome?",
-    placeholder: "Seu nome completo",
-  },
-  {
-    id: "company",
-    type: "text",
-    label: "Nome da sua loja?",
-    placeholder: "Nome da empresa",
-  },
-  {
-    id: "city",
-    type: "text",
-    label: "Em qual cidade você atua?",
-    placeholder: "Cidade · Estado",
-  },
-  {
-    id: "phone",
-    type: "phone",
-    label: "Qual é o seu WhatsApp?",
-    placeholder: "(11) 99999-9999",
-  },
+  { id: "projects", type: "choice", label: "Quantos projetos você fecha por mês?", options: ["0 a 2", "3 a 5", "6 a 10", "10 ou mais"] },
+  { id: "ticket", type: "choice", label: "Qual é o seu ticket médio?", options: ["Até R$10 mil", "R$10 a R$20 mil", "R$20 a R$30 mil", "Acima de R$30 mil"] },
+  { id: "origin", type: "choice", label: "Como a maioria dos seus clientes chegam até você?", options: ["Indicação", "Instagram", "Google", "Tráfego Pago", "Outros"] },
+  { id: "challenge", type: "choice", label: "Qual é o seu maior desafio hoje?", options: ["Poucos orçamentos", "Muitos curiosos", "Dependência de indicação", "Baixa conversão", "Falta de previsibilidade"] },
+  { id: "marketing", type: "choice", label: "Quanto você investe em marketing por mês?", options: ["Nada", "Até R$500", "R$500 a R$1.500", "Acima de R$1.500"] },
+  { id: "interest", type: "choice", label: "Se identificarmos uma oportunidade clara de crescimento, você teria interesse em investir para implementá-la?", options: ["Sim, estou pronto", "Talvez, dependendo do caso", "Ainda não"] },
+  { id: "name", type: "text", label: "Qual é o seu nome?", placeholder: "Seu nome completo" },
+  { id: "company", type: "text", label: "Nome da sua loja?", placeholder: "Nome da empresa" },
+  { id: "city", type: "text", label: "Em qual cidade você atua?", placeholder: "Cidade · Estado" },
+  { id: "phone", type: "phone", label: "Qual é o seu WhatsApp?", placeholder: "(53) 99999-9999" },
 ];
 
 function formatPhone(value: string) {
@@ -167,7 +111,6 @@ export default function Quiz({ isOpen, onClose }: QuizProps) {
           onClick={onClose}
           className="absolute inset-0 bg-[rgba(4,4,4,0.93)] backdrop-blur-md"
         />
-
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 24 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -175,16 +118,13 @@ export default function Quiz({ isOpen, onClose }: QuizProps) {
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           className="relative w-full max-w-lg bg-[#0f0e0c] border border-[rgba(255,255,255,0.08)] rounded-3xl overflow-hidden shadow-2xl"
         >
-          {/* Header */}
           <div className="p-6 border-b border-[rgba(255,255,255,0.06)]">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <span className="text-[#b48c5a] text-xs font-medium tracking-widest uppercase">
                   {isDataStep ? "Quase lá" : "Diagnóstico gratuito"}
                 </span>
-                {isDataStep && (
-                  <p className="text-[#4a4a48] text-xs mt-0.5">Precisamos dos seus dados para enviar a análise</p>
-                )}
+                {isDataStep && <p className="text-[#4a4a48] text-xs mt-0.5">Precisamos dos seus dados para enviar a análise</p>}
               </div>
               <button
                 onClick={() => { onClose(); resetQuiz(); }}
@@ -193,7 +133,6 @@ export default function Quiz({ isOpen, onClose }: QuizProps) {
                 <X size={14} />
               </button>
             </div>
-
             {!done && (
               <div className="space-y-2">
                 <div className="h-1 bg-[rgba(255,255,255,0.05)] rounded-full overflow-hidden">
@@ -209,7 +148,6 @@ export default function Quiz({ isOpen, onClose }: QuizProps) {
             )}
           </div>
 
-          {/* Content */}
           <div className="p-8 min-h-[320px] flex flex-col justify-center">
             <AnimatePresence mode="wait">
               {done ? (
@@ -220,14 +158,10 @@ export default function Quiz({ isOpen, onClose }: QuizProps) {
                   exit={{ opacity: 0, y: -20 }}
                   className="text-center space-y-6"
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a46e] to-[#8a6840] flex items-center justify-center mx-auto text-2xl">
-                    ✓
-                  </div>
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#c9a46e] to-[#8a6840] flex items-center justify-center mx-auto text-2xl">✓</div>
                   <div>
                     <h3 className="text-2xl font-semibold text-[#f0ede8] mb-2">Diagnóstico concluído!</h3>
-                    <p className="text-[#6a6a68] leading-relaxed text-sm">
-                      Identificamos oportunidades de crescimento para sua loja. Clique abaixo para receber sua análise personalizada.
-                    </p>
+                    <p className="text-[#6a6a68] leading-relaxed text-sm">Identificamos oportunidades de crescimento para sua loja. Clique abaixo para receber sua análise personalizada.</p>
                   </div>
                   <motion.button
                     onClick={handleWhatsApp}
@@ -248,9 +182,7 @@ export default function Quiz({ isOpen, onClose }: QuizProps) {
                   transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
                   className="space-y-6"
                 >
-                  <h3 className="text-xl md:text-2xl font-semibold text-[#f0ede8] leading-snug">
-                    {current.label}
-                  </h3>
+                  <h3 className="text-xl md:text-2xl font-semibold text-[#f0ede8] leading-snug">{current.label}</h3>
 
                   {(current.type === "text" || current.type === "phone") && (
                     <div className="space-y-3">

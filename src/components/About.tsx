@@ -22,8 +22,6 @@ export default function About({ onCTA }: { onCTA: () => void }) {
 
       <div className="relative max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-
-          {/* Photo */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -31,25 +29,13 @@ export default function About({ onCTA }: { onCTA: () => void }) {
             className="relative"
           >
             <div className="relative">
-              {/* Glow behind photo */}
               <div className="absolute inset-0 bg-gradient-to-br from-[rgba(180,140,90,0.15)] to-transparent rounded-3xl blur-2xl scale-110" />
-
-              {/* Frame */}
               <div className="relative rounded-3xl overflow-hidden border border-[rgba(180,140,90,0.15)] bg-[#1a1510]">
                 <div className="relative w-full" style={{ aspectRatio: "4/5" }}>
-                  <Image
-                    src="/igor.jpg"
-                    alt="Igor Pacheco"
-                    fill
-                    className="object-cover object-top"
-                    onError={() => {}}
-                  />
+                  <Image src="/igor.jpg" alt="Igor Pacheco" fill className="object-cover object-top" />
                 </div>
-                {/* Overlay gradient bottom */}
                 <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#080808] to-transparent" />
               </div>
-
-              {/* Badge floating */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -62,7 +48,6 @@ export default function About({ onCTA }: { onCTA: () => void }) {
             </div>
           </motion.div>
 
-          {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -70,30 +55,17 @@ export default function About({ onCTA }: { onCTA: () => void }) {
             className="space-y-6"
           >
             <div>
-              <span className="text-[#b48c5a] text-sm font-medium tracking-widest uppercase block mb-4">
-                Quem é Igor Pacheco
-              </span>
+              <span className="text-[#b48c5a] text-sm font-medium tracking-widest uppercase block mb-4">Quem é Igor Pacheco</span>
               <h2 className="text-4xl md:text-5xl font-semibold text-[#f0ede8] leading-tight mb-6">
                 Especialista que{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a46e] to-[#8a6840]">
-                  entende o seu mercado
-                </span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c9a46e] to-[#8a6840]">entende o seu mercado</span>
               </h2>
             </div>
-
             <div className="space-y-4 text-[#6a6a68] leading-relaxed">
-              <p>
-                Passei anos estudando por que lojas de móveis planejados com excelentes produtos não conseguiam crescer de forma consistente. A resposta era sempre a mesma: <span className="text-[#a0a098]">dependência de indicação e falta de um sistema previsível de geração de oportunidades.</span>
-              </p>
-              <p>
-                Desenvolvi o <span className="text-[#b48c5a] font-medium">Método Projeto Fechado™</span> especificamente para resolver esse problema. Não é tráfego pago genérico. Não é gestão de redes sociais. É um sistema completo que atrai, filtra e converte pessoas que estão <span className="text-[#a0a098]">ativamente planejando uma reforma</span>.
-              </p>
-              <p>
-                Trabalho exclusivamente com lojas de móveis planejados com faturamento acima de R$50 mil mensais, porque é onde consigo gerar o maior impacto e os resultados mais expressivos.
-              </p>
+              <p>Passei anos estudando por que lojas de móveis planejados com excelentes produtos não conseguiam crescer de forma consistente. A resposta era sempre a mesma: <span className="text-[#a0a098]">dependência de indicação e falta de um sistema previsível de geração de oportunidades.</span></p>
+              <p>Desenvolvi o <span className="text-[#b48c5a] font-medium">Método Projeto Fechado™</span> especificamente para resolver esse problema. Não é tráfego pago genérico. É um sistema completo que atrai, filtra e converte pessoas que estão <span className="text-[#a0a098]">ativamente planejando uma reforma</span>.</p>
+              <p>Trabalho exclusivamente com lojas de móveis planejados com faturamento acima de R$50 mil mensais, porque é onde consigo gerar o maior impacto e os resultados mais expressivos.</p>
             </div>
-
-            {/* Credentials */}
             <div className="grid grid-cols-3 gap-4 pt-4">
               {credentials.map((c, i) => (
                 <motion.div
@@ -103,14 +75,11 @@ export default function About({ onCTA }: { onCTA: () => void }) {
                   transition={{ delay: 0.4 + i * 0.1, duration: 0.5 }}
                   className="text-center p-4 rounded-xl border border-[rgba(180,140,90,0.1)] bg-[rgba(180,140,90,0.03)]"
                 >
-                  <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#c9a46e] to-[#b48c5a]">
-                    {c.number}
-                  </p>
+                  <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#c9a46e] to-[#b48c5a]">{c.number}</p>
                   <p className="text-[#4a4a48] text-xs mt-1">{c.label}</p>
                 </motion.div>
               ))}
             </div>
-
             <motion.button
               onClick={onCTA}
               whileHover={{ scale: 1.02 }}

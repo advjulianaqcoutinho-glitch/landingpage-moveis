@@ -60,8 +60,7 @@ const schemaMarkup = {
       "@id": `${BASE_URL}/#igor`,
       name: "Igor Pacheco",
       jobTitle: "Especialista em Crescimento para Lojas de Móveis Planejados",
-      description:
-        "Especialista em crescimento para lojas de móveis planejados. Criador do Método Projeto Fechado™.",
+      description: "Especialista em crescimento para lojas de móveis planejados. Criador do Método Projeto Fechado™.",
       url: BASE_URL,
       sameAs: [`https://wa.me/5353999972327`],
     },
@@ -69,15 +68,11 @@ const schemaMarkup = {
       "@type": "ProfessionalService",
       "@id": `${BASE_URL}/#service`,
       name: "Método Projeto Fechado™",
-      description:
-        "Sistema de geração de oportunidades qualificadas para lojas de móveis planejados.",
+      description: "Sistema de geração de oportunidades qualificadas para lojas de móveis planejados.",
       provider: { "@id": `${BASE_URL}/#igor` },
       url: BASE_URL,
       areaServed: "BR",
-      audience: {
-        "@type": "BusinessAudience",
-        audienceType: "Lojas de Móveis Planejados",
-      },
+      audience: { "@type": "BusinessAudience", audienceType: "Lojas de Móveis Planejados" },
     },
     {
       "@type": "FAQPage",
@@ -87,7 +82,7 @@ const schemaMarkup = {
           name: "Já investi em anúncios antes e não tive resultado. Como isso é diferente?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "O Método Projeto Fechado™ trabalha com segmentação cirúrgica — alcançamos pessoas que estão ativamente em obra ou reforma, com o orçamento e o momento certos.",
+            text: "O Método Projeto Fechado™ trabalha com segmentação cirúrgica — alcançamos pessoas que estão ativamente em obra ou reforma.",
           },
         },
         {
@@ -103,7 +98,7 @@ const schemaMarkup = {
           name: "Funciona para cidades pequenas?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Sim. O método foi validado em cidades de diferentes portes. Em cidades menores, a concorrência geralmente não usa estratégias estruturadas.",
+            text: "Sim. O método foi validado em cidades de diferentes portes.",
           },
         },
       ],

@@ -8,7 +8,6 @@ const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID;
 export default function Analytics() {
   return (
     <>
-      {/* Microsoft Clarity */}
       {CLARITY_ID && (
         <Script id="ms-clarity" strategy="afterInteractive">
           {`
@@ -20,22 +19,15 @@ export default function Analytics() {
           `}
         </Script>
       )}
-
-      {/* Google Analytics 4 */}
       {GA4_ID && (
         <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
-            strategy="afterInteractive"
-          />
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} strategy="afterInteractive" />
           <Script id="ga4-init" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${GA4_ID}', {
-                page_path: window.location.pathname,
-              });
+              gtag('config', '${GA4_ID}', { page_path: window.location.pathname });
             `}
           </Script>
         </>

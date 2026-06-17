@@ -23,9 +23,7 @@ export default function Home() {
   return (
     <>
       <div className="grain-overlay" />
-
       <Navbar onCTA={openQuiz} />
-
       <main className="pt-16">
         <Hero onCTA={openQuiz} />
         <Identification />
@@ -37,7 +35,6 @@ export default function Home() {
         <FAQ />
         <FinalCTA onCTA={openQuiz} />
       </main>
-
       <footer className="py-8 px-6 border-t border-[rgba(255,255,255,0.04)]">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="text-[#3a3a38] text-sm">
@@ -46,8 +43,6 @@ export default function Home() {
           <p className="text-[#2a2a28] text-xs">Método Projeto Fechado™ · Todos os direitos reservados</p>
         </div>
       </footer>
-
-      {/* Floating elements */}
       <SocialProof />
       <MobileCTA onCTA={openQuiz} />
       <ExitIntent onCTA={openQuiz} />

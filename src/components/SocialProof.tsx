@@ -18,7 +18,7 @@ const notifications = [
 
 function getTimeAgo() {
   const mins = Math.floor(Math.random() * 25) + 2;
-  return mins === 1 ? "1 min atrás" : `${mins} min atrás`;
+  return `${mins} min atrás`;
 }
 
 export default function SocialProof() {
@@ -28,10 +28,7 @@ export default function SocialProof() {
   const [timeAgo, setTimeAgo] = useState("");
 
   useEffect(() => {
-    const initialDelay = setTimeout(() => {
-      showNotification(0);
-    }, 8000);
-
+    const initialDelay = setTimeout(() => showNotification(0), 8000);
     return () => clearTimeout(initialDelay);
   }, []);
 
@@ -40,7 +37,6 @@ export default function SocialProof() {
     setTimeAgo(getTimeAgo());
     setCurrent(item);
     setVisible(true);
-
     setTimeout(() => {
       setVisible(false);
       setTimeout(() => {
@@ -67,9 +63,7 @@ export default function SocialProof() {
               {current.city[0]}
             </div>
             <div className="min-w-0">
-              <p className="text-[#f0ede8] text-xs font-medium leading-tight">
-                {current.city} · {current.state}
-              </p>
+              <p className="text-[#f0ede8] text-xs font-medium leading-tight">{current.city} · {current.state}</p>
               <p className="text-[#6a6a68] text-xs leading-tight">{current.action}</p>
               <p className="text-[#3a3a38] text-[10px] mt-0.5">{timeAgo}</p>
             </div>
