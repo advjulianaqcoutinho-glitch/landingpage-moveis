@@ -8,9 +8,12 @@ import Method from "@/components/Method";
 import About from "@/components/About";
 import Results from "@/components/Results";
 import Comparison from "@/components/Comparison";
+import TrustBar from "@/components/TrustBar";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import MobileCTA from "@/components/MobileCTA";
+import SocialProof from "@/components/SocialProof";
+import ExitIntent from "@/components/ExitIntent";
 import Quiz from "@/components/Quiz";
 
 export default function Home() {
@@ -30,6 +33,7 @@ export default function Home() {
         <About onCTA={openQuiz} />
         <Results />
         <Comparison />
+        <TrustBar />
         <FAQ />
         <FinalCTA onCTA={openQuiz} />
       </main>
@@ -43,7 +47,10 @@ export default function Home() {
         </div>
       </footer>
 
+      {/* Floating elements */}
+      <SocialProof />
       <MobileCTA onCTA={openQuiz} />
+      <ExitIntent onCTA={openQuiz} />
       <Quiz isOpen={quizOpen} onClose={() => setQuizOpen(false)} />
     </>
   );
